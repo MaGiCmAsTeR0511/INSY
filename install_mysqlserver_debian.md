@@ -67,7 +67,7 @@ mysql  Ver 8.0.38 for Linux on x86_64 (MySQL Community Server - GPL)
 ```
 
 
-##Manage the MySQL System Service
+## Manage the MySQL System Service
 MySQL uses the mysqld system service to manage the database server runtime processes through the systemd daemon. Follow the steps below to manage the MySQL system service and enable the database server to automatically start at boot time.
 
 1. Enable the MySQL database server to automatically start at boot time.
@@ -85,5 +85,5 @@ $   sudo systemclt start mysql
 $   sudo systemctl status mysql
 ```
 
-##Secure the MySQL Database Server
+## Secure the MySQL Database Server
 The MySQL root database user is actively secure on your server with the password you set earlier during the installation process. MySQL includes additional insecure defaults such as test databases and remote access to the root database user on your server. Follow the steps below to disable all insecure default configurations and secure the MySQL database server.
