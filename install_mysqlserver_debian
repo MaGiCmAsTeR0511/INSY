@@ -1,0 +1,9 @@
+1. Download repository Package
+```console
+$  wget https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb
+```
+
+2. Install repository information
+```console
+$  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb 
+```
