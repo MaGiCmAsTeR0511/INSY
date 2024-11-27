@@ -87,3 +87,69 @@ $   sudo systemctl status mysql
 
 ## Secure the MySQL Database Server
 The MySQL root database user is actively secure on your server with the password you set earlier during the installation process. MySQL includes additional insecure defaults such as test databases and remote access to the root database user on your server. Follow the steps below to disable all insecure default configurations and secure the MySQL database server.
+
+1. Run the MySQL secure installation.
+```console
+$   sudo mysql_secure_installation
+```
+
+Reply to the following MySQL prompts to secure your database server.
+- Enter the root database user to start the secure installation script and modify the database server configuration.
+```console
+Securing the MySQL server deployment.
+
+Enter password for user root:
+```
+
+- Enter Y and press Enter to enable the VALIDATE PASSWORD COMPONENT and ensure strict password security policies.
+
+```console
+Would you like to setup VALIDATE PASSWORD component?
+
+Press y|Y for Yes, any other key for No:
+```
+
+- Set your desired MySQL database server password strength policy. For example, enter 2 and press Enter to enable the use of strong passwords on your server.
+
+```console
+LOW    Length >= 8
+MEDIUM Length >= 8, numeric, mixed case, and special characters
+STRONG Length >= 8, numeric, mixed case, special characters and dictionary file
+
+Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 2
+```
+
+- Enter N when prompted to change the root database user password, or enter Y to change the password.
+
+```console
+Change the password for root ? ((Press y|Y for Yes, any other key for No) :
+```
+
+- Enter Y and press Enter when prompted to remove anonymous users on the database server.
+```console
+Remove anonymous users? (Press y|Y for Yes, any other key for No) :
+```
+
+- Enter Y and press Enter to disable remote access to the root database user.
+```console
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) :
+```
+
+- Enter Y and press Enter to remove the test database on your server.
+```console
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) :
+```
+
+- Enter Y and press Enter to update the MySQL privileges table and apply your configuration changes.
+
+```console
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) :
+```
+
+Output:
+
+```console
+Success.
+
+All done!
+```
