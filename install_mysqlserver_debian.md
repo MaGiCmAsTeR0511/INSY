@@ -77,7 +77,7 @@ $   sudo systemctl enable mysql
 
 2. Start the MySQL database server.
 ```console
-$   sudo systemclt start mysql
+$   sudo systemctl start mysql
 ```
 
 3. View the MySQL system service status and verify that it's running.
